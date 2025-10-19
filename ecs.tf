@@ -9,6 +9,7 @@ resource "aws_ecr_repository" "pro_reservation" {
 #create ECS cluster
 resource "aws_ecs_cluster" "reservation_PRO" {
   name = "reservation_PRO"
+  description = "austin test 1"
 }
 
 resource "aws_ecs_cluster_capacity_providers" "pro_reservation" {
@@ -21,6 +22,5 @@ resource "aws_ecs_cluster_capacity_providers" "pro_reservation" {
     weight            = 10
     capacity_provider = aws_ecs_capacity_provider.fargate
   }
-}
 
 
